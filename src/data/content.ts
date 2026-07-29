@@ -95,3 +95,40 @@ export const contact = {
   email: 'marketing@farmel.co.id',
   address: 'Jl. Raya Pondok Jaya No. 1 Bintaro, Tangerang, Indonesia',
 }
+
+
+
+export type ProductItem = { title: string; category: string; image: string }
+
+export const products: ProductItem[] = [
+  {
+    title: 'Karbon Aktif Norit GAC 830w',
+    category: 'PRODUK KAMI',
+    image: 'https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?auto=compress&cs=tinysrgb&w=600&q=80',
+  },
+  {
+    title: 'Kaporit (TCCA)',
+    category: 'PRODUK KAMI',
+    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=compress&cs=tinysrgb&w=600&q=80',
+  },
+  {
+    title: 'Anthracite Filter Media',
+    category: 'PRODUK KAMI',
+    image: 'https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=compress&cs=tinysrgb&w=600&q=80',
+  },
+  {
+    title: 'Silica Sand',
+    category: 'PRODUK KAMI',
+    image: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=compress&cs=tinysrgb&w=600&q=80',
+  },
+  {
+    title: 'Tabung FRP (FRP Tank)',
+    category: 'PRODUK KAMI',
+    image: 'https://images.pexels.com/photos/2258570/pexels-photo-2258570.jpeg?auto=compress&cs=tinysrgb&w=600&q=80',
+  },
+  {
+    title: 'Sistem IPAL / WWTP',
+    category: 'PRODUK KAMI',
+    image: 'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=600&q=80',
+  },
+]
