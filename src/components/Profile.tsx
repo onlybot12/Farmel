@@ -1,0 +1,72 @@
+import { Icon } from './Icon'
+
+export function Profile() {
+  return (
+    <section id="profil" className="section-pad">
+      <div className="container-x grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+        <div className="reveal relative">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] shadow-xl">
+            <img
+              src="https://images.pexels.com/photos/2614818/pexels-photo-2614818.jpeg?auto=compress&cs=tinysrgb&w=900"
+              alt="Tim Farmel di lokasi proyek"
+              className="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div className="absolute -bottom-6 -right-4 hidden rounded-3xl border border-slate-100 bg-white p-6 shadow-xl sm:block">
+            <p className="font-display text-4xl font-extrabold text-brand-700">20+</p>
+            <p className="mt-1 text-sm font-medium text-slate-500">Tahun pengalaman<br />melayani Indonesia</p>
+          </div>
+        </div>
+
+        <div className="reveal [transition-delay:120ms]">
+          <span className="eyebrow">
+            <span className="h-px w-8 bg-brand-500" /> Company Profile
+          </span>
+          <h2 className="h-display mt-4 text-3xl sm:text-4xl">
+            Mitra terpercaya total water management & general contractor
+          </h2>
+          <p className="mt-5 text-slate-600 leading-relaxed">
+            <strong className="font-semibold text-slate-800">Farmel Cahaya Mandiri</strong> berdiri sejak 2004,
+            bergerak di bidang chemical trading, industri pengolahan air bersih dan limbah
+            dengan menyediakan kebutuhan pasar akan produk berkualitas, berbekal teknologi
+            lingkungan yang mutakhir dan efektif.
+          </p>
+          <p className="mt-4 text-slate-600 leading-relaxed">
+            Pada 2010 kami membentuk unit jasa konstruksi — gedung, jembatan, jalan, serta
+            mekanikal dan elektrikal. Lalu pada 2016, <strong className="font-semibold text-slate-800">PT. Farmel Cipta Mandiri</strong> hadir
+            untuk memenuhi kebutuhan service dan pelayanan yang optimal.
+          </p>
+
+          {/* Visi Misi */}
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            <div className="card">
+              <div className="flex items-center gap-3">
+                <span className="grid h-10 w-10 place-items-center rounded-xl bg-brand-50 text-brand-600">
+                  <Icon name="zap" className="h-5 w-5" />
+                </span>
+                <h3 className="font-display text-lg font-bold text-slate-900">Visi</h3>
+              </div>
+              <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                Menjadi perusahaan multinasional yang kompeten di bidang total water
+                manajemen serta general kontraktor.
+              </p>
+            </div>
+            <div className="card">
+              <div className="flex items-center gap-3">
+                <span className="grid h-10 w-10 place-items-center rounded-xl bg-brand-50 text-brand-600">
+                  <Icon name="award" className="h-5 w-5" />
+                </span>
+                <h3 className="font-display text-lg font-bold text-slate-900">Misi</h3>
+              </div>
+              <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                Memberikan produk kualitas terbaik dan layanan total water manajemen serta
+                general kontraktor untuk pembangunan dengan menjaga kelestarian lingkungan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

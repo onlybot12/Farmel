@@ -1,0 +1,68 @@
+import { Icon } from './Icon'
+import { contact, branches } from '../data/content'
+
+export function Footer() {
+  const products = ['Total Water Treatment', 'Water Treatment Plant', 'Waste Water Treatment Plant']
+  const sectors = ['Rumah', 'Apartemen', 'Rumah Sakit', 'Gedung Kantor', 'Pabrik Industri']
+
+  return (
+    <footer className="border-t border-slate-100 bg-slate-950 pt-16 pb-8 text-slate-400">
+      <div className="container-x">
+        <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+          <div>
+            <div className="flex items-center gap-3">
+              <span className="grid h-11 w-11 place-items-center rounded-2xl bg-brand-600 text-white">
+                <Icon name="droplet" className="h-6 w-6" />
+              </span>
+              <div className="leading-none">
+                <p className="font-display text-xl font-extrabold text-white">Farmel</p>
+                <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-400">Water Solution</p>
+              </div>
+            </div>
+            <p className="mt-5 max-w-sm text-sm leading-relaxed">
+              Indonesia's Biggest Water Treatment Technology and General Contractor.
+              Total Water Management sejak 2004.
+            </p>
+            <div className="mt-6 space-y-2 text-sm">
+              <p className="flex items-center gap-2"><Icon name="phone" className="h-4 w-4 text-brand-400" /> {contact.phone}</p>
+              <p className="flex items-center gap-2"><Icon name="mail" className="h-4 w-4 text-brand-400" /> {contact.email}</p>
+              <p className="flex items-start gap-2"><Icon name="pin" className="mt-0.5 h-4 w-4 shrink-0 text-brand-400" /> {contact.address}</p>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font-display text-sm font-bold uppercase tracking-wide text-white">Produk</h4>
+            <ul className="mt-4 space-y-2.5 text-sm">
+              {products.map((p) => (
+                <li key={p} className="transition-colors hover:text-white">{p}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-display text-sm font-bold uppercase tracking-wide text-white">Sektor</h4>
+            <ul className="mt-4 space-y-2.5 text-sm">
+              {sectors.map((s) => (
+                <li key={s} className="transition-colors hover:text-white">{s}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-display text-sm font-bold uppercase tracking-wide text-white">Cabang</h4>
+            <ul className="mt-4 space-y-2.5 text-sm">
+              {branches.map((b) => (
+                <li key={b} className="transition-colors hover:text-white">{b}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs sm:flex-row">
+          <p>© {new Date().getFullYear()} Farmel Cahaya Mandiri. All rights reserved.</p>
+          <p>Designed with care for a cleaner Indonesia.</p>
+        </div>
+      </div>
+    </footer>
+  )
+}
