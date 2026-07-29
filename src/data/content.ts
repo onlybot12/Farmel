@@ -41,16 +41,27 @@ export const sectors = [
 export const branches = ['Jakarta Pusat', 'Bintaro', 'Semarang', 'Surabaya', 'Bali']
 
 export const clients = [
-  'Richeese Factory', 'Waskita Karya', 'Bali Hai', 'PP Konstruksi',
-  'Argha Karya', 'Hutama Karya', 'Unifam', 'Wika',
-  'Kiko', 'Angkasa Pura II', 'Darya Varia', 'Adhi Karya',
-  'Sierad Produce', 'Nabati',
+  'Richeese Factory', 
+  'Waskita Karya', 
+  'Bali Hai', 
+  'PP Konstruksi',
+  'Argha Karya', 
+  'Hutama Karya', 
+  'Unifam', 
+  'Wika',
+  'Kiko', 
+  'Angkasa Pura II', 
+  'Darya Varia', 
+  'Adhi Karya',
+  'Sierad Produce',
+  'Nabati',
 ]
 
 export const milestones = [
   { year: '2004', title: 'Awal Perjalanan', desc: 'Farmel Cahaya Mandiri berdiri sebagai chemical trading dan pengolahan air.' },
   { year: '2010', title: 'Unit Konstruksi', desc: 'Membentuk unit usaha jasa konstruksi, gedung, jembatan, jalan, serta mekanikal elektrikal.' },
   { year: '2016', title: 'PT. Farmel Cipta Mandiri', desc: 'Unit baru untuk memenuhi kebutuhan service dan pelayanan pengolahan air yang optimal.' },
+  { year: '2020', title: 'PT. Farmel Cipta Mulia', desc: 'Unit baru untuk memenuhi kebutuhan service dan pelayanan pengolahan air yang optimal.' },
   { year: 'Kini', title: 'Total Water Management', desc: 'Menjadi mitra terpercaya total water management dan general contractor di Indonesia.' },
 ]
 
