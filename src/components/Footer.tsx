@@ -38,7 +38,8 @@ export function Footer() {
               Total Water Management sejak 2004.
             </p>
             <div className="mt-6 space-y-2 text-sm">
-              <p className="flex items-center gap-2"><Icon name="phone" className="h-4 w-4 text-brand-400" /> {contact.phone}</p>
+              <p className="flex items-center gap-2"><Icon name="phone" className="h-4 w-4 text-brand-400" /> Telp  {contact.phone}</p>
+              <p className="flex items-center gap-2"><Icon name="phone" className="h-4 w-4 text-brand-400" /> Fax  {contact.phone2}</p>
               <p className="flex items-center gap-2"><Icon name="mail" className="h-4 w-4 text-brand-400" /> {contact.email}</p>
               <p className="flex items-start gap-2"><Icon name="pin" className="mt-0.5 h-4 w-4 shrink-0 text-brand-400" /> {contact.address}</p>
             </div>
