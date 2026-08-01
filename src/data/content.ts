@@ -132,3 +132,64 @@ export const products: ProductItem[] = [
     image: 'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=600&q=80',
   },
 ]
+
+
+
+
+export type FullProductItem = {
+  title: string
+  brand?: string
+  icon: string
+  items: { label: string; desc?: string }[]
+}
+
+export const fullProducts: FullProductItem[] = [
+  {
+    title: 'WATER TREATMENT',
+    brand: 'FARMEL',
+    icon: 'droplet',
+    items: [
+      {
+        label: 'A. Chemical Treatment (Brand: Raschem)',
+        desc: 'Cooling Tower Treatment, Boiler Water Treatment, Chiller Water Treatment, Cleaning Water Treatment.',
+      },
+      {
+        label: 'B. Equipment',
+        desc: 'Sand Filter, Carbon Filter, Manganese Filter RASCHEM, Pressure Gravity Filter, Water Softener, FRP Panel.',
+      },
+      {
+        label: 'C. Treatment System',
+        desc: 'Demineralizer, Reverse Osmosis, Water Recycling Treatment, Water Treatment Package.',
+      },
+    ],
+  },
+  {
+    title: 'WASTE WATER TREATMENT',
+    brand: 'FARMEL',
+    icon: 'recycle',
+    items: [
+      {
+        label: 'A. Sewage Treatment',
+        desc: 'Extended Aeration, Portable Biotechnology System.',
+      },
+      {
+        label: 'B. Waste Water Treatment System',
+        desc: 'Anaerobic and Aerobic System, Daffresh Package, Sedimentation Package, WWTP Package Mobile, Biogas Treatment.',
+      },
+    ],
+  },
+  {
+    title: 'SERVICE & MAINTENANCE',
+    icon: 'building',
+    items: [
+      { label: 'A. Engineering Design WTP/STP/WWTP' },
+      { label: 'B. Procurement, Installation and Construction' },
+      { label: 'C. Consulting and Supervision' },
+      { label: 'D. Optimalisation and Assesment WTP/STP/WWTP' },
+      { label: 'E. Operational & Maintenance WTP/STP/WWTP' },
+      { label: 'F. Cleaning Boiler, Cooling & Chiller Tower' },
+      { label: 'G. Media Filter Replace' },
+      { label: 'H. Replacement Media Filtration' },
+    ],
+  },
+]
