@@ -7,7 +7,7 @@ export function Profile() {
         <div className="reveal relative">
           <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] shadow-xl">
             <img
-              src="https://images.pexels.com/photos/2614818/pexels-photo-2614818.jpeg?auto=compress&cs=tinysrgb&w=900"
+              src="/kantor.jpg"
               alt="Tim Farmel di lokasi proyek"
               className="h-full w-full object-cover"
               loading="lazy"
