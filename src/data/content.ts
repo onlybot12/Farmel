@@ -44,16 +44,16 @@ export type ClientItem = { name: string; logo: string }
 
 export const clients: ClientItem[] = [
   { name: 'Richeese Factory', logo: '/client/Logo-Richeese-Factory.png' },
-  { name: 'Waskita Karya', logo: '/client/waskita_karya.jpg' },
+  { name: 'Angkasa Pura II', logo: '/client/Logo-Angkasa-Pura-II.png' },
+  { name: 'Unifam', logo: '/client/Logo-Unifam.png' },
+  { name: 'Darya Varia', logo: '/client/Logo-Darya_Varia.png' },
+  
   { name: 'Bali Hai', logo: '/client/bali_hai.jpg' },
   { name: 'PP Konstruksi', logo: '/client/pp_konstruksi.jpg' },
   { name: 'Argha Karya', logo: '/client/argha_karya.jpg' },
   { name: 'Hutama Karya', logo: '/client/hutama_karya.jpg' },
-  { name: 'Unifam', logo: '/client/unifam.jpg' },
   { name: 'Wika', logo: '/client/wika.jpg' },
   { name: 'Kiko', logo: '/client/kiko.jpg' },
-  { name: 'Angkasa Pura II', logo: '/client/angkasa_pura_ii.jpg' },
-  { name: 'Darya Varia', logo: '/client/darya_varia.jpg' },
   { name: 'Adhi Karya', logo: '/client/adhi_karya.jpg' },
   { name: 'Sierad Produce', logo: '/client/sierad_produce.jpg' },
   { name: 'Nabati', logo: '/client/nabati.jpg' },
