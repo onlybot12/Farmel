@@ -17,23 +17,36 @@ export function Clients() {
           </p>
         </div>
 
-        {/* Logo marquee */}
+        { }
         <div className="reveal mt-12 marquee-mask overflow-hidden">
           <div className="marquee gap-5">
             {[...clients, ...clients].map((c, i) => (
               <div
-                key={`${c}-${i}`}
-                className="flex h-24 w-56 shrink-0 items-center justify-center rounded-2xl border border-slate-100 bg-white px-6 shadow-sm transition-colors hover:border-brand-200"
+                key={`${c.name}-${i}`}
+                className="flex flex-col h-32 w-52 shrink-0 items-center justify-center rounded-2xl border border-slate-100 bg-white px-4 py-3 shadow-sm transition-colors hover:border-brand-200"
               >
-                <span className="font-display text-lg font-bold text-slate-400 transition-colors hover:text-brand-600">
-                  {c}
+                { }
+                <div className="flex h-14 w-full items-center justify-center">
+                  <img
+                    src={c.logo}
+                    alt={c.name}
+                    className="h-10 w-auto max-w-[85%] object-contain"
+                    onError={(e) => {
+                    
+                      (e.target as HTMLElement).style.display = 'none'
+                    }}
+                  />
+                </div>
+                { }
+                <span className="mt-2 text-center font-display text-xs font-bold text-slate-400 transition-colors hover:text-brand-600 line-clamp-1">
+                  {c.name}
                 </span>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Branches */}
+        { }
         <div className="reveal mt-16 grid gap-6 rounded-3xl bg-brand-800 p-8 text-white sm:grid-cols-2 sm:p-10">
           <div>
             <h3 className="font-display text-2xl font-bold">Jangkauan nasional</h3>
