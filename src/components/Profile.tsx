@@ -34,7 +34,7 @@ export function Profile() {
           </p>
           <p className="mt-4 text-slate-600 leading-relaxed">
             Pada 2010 kami membentuk unit jasa konstruksi — gedung, jembatan, jalan, serta
-            mekanikal dan elektrikal. Lalu pada 2016, <strong className="font-semibold text-slate-800">PT. Farmel Cipta Mandiri</strong> hadir
+            mekanikal dan elektrikal. Lalu pada 2016, PT. Farmel Cipta Mandiri hadir
             untuk memenuhi kebutuhan service dan pelayanan yang optimal. Dan pada tahun 2023 terbentuk Perusahaan baru yaitu <strong className= "font-semibold text-slate-800"> PT. Farmel Cipta Mulia</strong> khusus untuk melayani service chemical water treatment dan kebutuhan lainnya.
           </p>
 
