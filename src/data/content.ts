@@ -46,7 +46,7 @@ export const clients: ClientItem[] = [
   { name: 'Richeese Factory', logo: '/client/Logo-Richeese-Factory.png' },
   { name: 'Angkasa Pura II', logo: '/client/Logo-Angkasa-Pura-II.png' },
   { name: 'Unifam', logo: '/client/Logo-Unifam.png' },
-  { name: 'Darya Varia', logo: '/client/Logo-Darya_Varia.png' },
+  { name: 'Darya Varia', logo: '/client/Logo-Darya-Varia.png' },
   { name: 'Bali Hai', logo: '/client/logo-bali_hai.png' },
 ]
 
