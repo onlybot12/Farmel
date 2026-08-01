@@ -128,61 +128,101 @@ export const products: ProductItem[] = [
 
 
 
+// ... (Kode di bagian atas file biarkan seperti semula, ganti bagian paling bawah dengan ini)
 
-export type FullProductItem = {
-  title: string
+export type SubCategoryItem = {
+  name: string
   brand?: string
-  icon: string
-  items: { label: string; desc?: string }[]
+  points: string[]
 }
 
-export const fullProducts: FullProductItem[] = [
+export type FullProductCategory = {
+  id: string
+  title: string
+  icon: string
+  subcategories: SubCategoryItem[]
+}
+
+export const fullProducts: FullProductCategory[] = [
   {
-    title: 'WATER TREATMENT',
-    brand: 'FARMEL',
+    id: '01',
+    title: 'Water Treatment',
     icon: 'droplet',
-    items: [
+    subcategories: [
       {
-        label: 'A. Chemical Treatment (Brand: Raschem)',
-        desc: 'Cooling Tower Treatment, Boiler Water Treatment, Chiller Water Treatment, Cleaning Water Treatment.',
+        name: 'CHEMICAL TREATMENT',
+        brand: 'RASCHEM',
+        points: [
+          'Cooling Tower Treatment',
+          'Boiler Water Treatment',
+          'Chiller Water Treatment',
+          'Cleaning Water Treatment',
+        ],
       },
       {
-        label: 'B. Equipment',
-        desc: 'Sand Filter, Carbon Filter, Manganese Filter RASCHEM, Pressure Gravity Filter, Water Softener, FRP Panel.',
+        name: 'EQUIPMENT',
+        points: [
+          'Sand Filter',
+          'Carbon Filter',
+          'Manganese Filter',
+          'Pressure Gravity Filter',
+          'Water Softener',
+          'FRP Panel',
+        ],
       },
       {
-        label: 'C. Treatment System',
-        desc: 'Demineralizer, Reverse Osmosis, Water Recycling Treatment, Water Treatment Package.',
+        name: 'TREATMENT SYSTEM',
+        points: [
+          'Demineralizer',
+          'Reverse Osmosis',
+          'Water Recycling Treatment',
+          'Water Treatment Package',
+        ],
       },
     ],
   },
   {
-    title: 'WASTE WATER TREATMENT',
-    brand: 'FARMEL',
+    id: '02',
+    title: 'Waste Water Treatment',
     icon: 'recycle',
-    items: [
+    subcategories: [
       {
-        label: 'A. Sewage Treatment',
-        desc: 'Extended Aeration, Portable Biotechnology System.',
+        name: 'SEWAGE TREATMENT',
+        points: [
+          'Extended Aeration',
+          'Portable Biotechnology System',
+        ],
       },
       {
-        label: 'B. Waste Water Treatment System',
-        desc: 'Anaerobic and Aerobic System, Daffresh Package, Sedimentation Package, WWTP Package Mobile, Biogas Treatment.',
+        name: 'WASTE WATER TREATMENT SYSTEM',
+        points: [
+          'Anaerobic and Aerobic System',
+          'Daffresh Package',
+          'Sedimentation Package',
+          'WWTP Package Mobile',
+          'Biogas Treatment',
+        ],
       },
     ],
   },
   {
-    title: 'SERVICE & MAINTENANCE',
+    id: '03',
+    title: 'Service & Maintenance',
     icon: 'building',
-    items: [
-      { label: 'A. Engineering Design WTP/STP/WWTP' },
-      { label: 'B. Procurement, Installation and Construction' },
-      { label: 'C. Consulting and Supervision' },
-      { label: 'D. Optimalisation and Assesment WTP/STP/WWTP' },
-      { label: 'E. Operational & Maintenance WTP/STP/WWTP' },
-      { label: 'F. Cleaning Boiler, Cooling & Chiller Tower' },
-      { label: 'G. Media Filter Replace' },
-      { label: 'H. Replacement Media Filtration' },
+    subcategories: [
+      {
+        name: 'ENGINEERING & MAINTENANCE SERVICES',
+        points: [
+          'Engineering Design WTP/STP/WWTP',
+          'Procurement, Installation and Construction',
+          'Consulting and Supervision',
+          'Optimalisation and Assessment WTP/STP/WWTP',
+          'Operational & Maintenance WTP/STP/WWTP',
+          'Cleaning Boiler, Cooling & Chiller Tower',
+          'Media Filter Replace',
+          'Replacement Media Filtration',
+        ],
+      },
     ],
   },
 ]
