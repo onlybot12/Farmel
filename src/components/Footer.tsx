@@ -1,32 +1,67 @@
 import { Icon } from './Icon'
-import { contact, branches } from '../data/content'
+import { contact } from '../data/content'
 
 export function Footer() {
   const products = ['Total Water Treatment', 'Water Treatment Plant', 'Waste Water Treatment Plant']
   const sectors = ['Rumah', 'Apartemen', 'Rumah Sakit', 'Gedung Kantor', 'Pabrik Industri']
 
+  // Daftar data detail cabang yang Anda berikan
+  const branchDetails = [
+    {
+      name: 'Jakarta Pusat',
+      address: 'Jl. Raya Bendungan Jago No. 20 E Kemayoran - Jakarta Pusat',
+    },
+    {
+      name: 'Surabaya',
+      address: 'Komp. Ruko Monroe Jl. Kahuripan Nirwana No. 31 Sidoarjo, Jawa Timur',
+      telp: '(031) 99722221',
+      email: 'marketing.surabaya@farmel.co.id',
+    },
+    {
+      name: 'Bintaro',
+      address: 'Jl. Raya Pondok Jaya No. 51 Bintaro, Tangerang - Banten',
+      telp: '(62-21) 73884735',
+      fax: '(62-21) 73884745',
+    },
+    {
+      name: 'Semarang',
+      address: 'Jl. Perintis Kemerdekaan No. 20 Banyumanik - Semarang',
+      telp: '(024) 746 4580',
+      fax: '(024) 746 4580',
+      email: 'marketing.semarang@farmel.co.id',
+    },
+    {
+      name: 'Bali',
+      address: 'Jl. Tukad Badung Denpasar - Bali',
+      telp: '08111731701',
+      email: 'marketing.bali@farmel.co.id',
+    },
+    {
+      name: 'Tangerang',
+      address: 'Jl. Raya Palasari, Kampung Bungaok RT 04/01 Ds. Caringin Kec. Legok, Tangerang - Banten',
+    },
+  ]
+
   return (
     <footer className="border-t border-slate-100 bg-slate-950 pt-16 pb-8 text-slate-400">
       <div className="container-x">
-        <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+        {/* Rasio lebar kolom grid disesuaikan agar kolom Cabang (paling kanan) menjadi lebih lebar */}
+        <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1.8fr]">
           <div>
             
-            {/* Bagian Logo Footer (Telah di-update menggunakan Gambar Logo) */}
+            {/* Bagian Logo Footer */}
             <div className="flex items-center gap-3">
               <img 
                 src="/logo.png" 
                 alt="Logo Farmel" 
                 className="h-11 w-auto object-contain" 
                 onError={(e) => {
-                  // Fallback: Jika file gambar logo.png tidak ditemukan di folder public,
-                  // ia akan otomatis menyembunyikan gambar kosong dan memunculkan teks di bawahnya.
                   const target = e.target as HTMLElement;
                   target.style.display = 'none';
                   const textFallback = target.nextElementSibling as HTMLElement;
                   if (textFallback) textFallback.style.display = 'block';
                 }}
               />
-              {/* Fallback Teks (Hanya muncul jika file gambar logo.png tidak ditemukan) */}
               <div className="hidden leading-none">
                 <p className="font-display text-xl font-extrabold text-white">Farmel</p>
                 <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-400">Water Solution</p>
@@ -63,13 +98,26 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Kolom Cabang Baru (Dengan rincian alamat dan kontak yang rapi) */}
           <div>
-            <h4 className="font-display text-sm font-bold uppercase tracking-wide text-white">Cabang</h4>
-            <ul className="mt-4 space-y-2.5 text-sm">
-              {branches.map((b) => (
-                <li key={b} className="transition-colors hover:text-white">{b}</li>
+            <h4 className="font-display text-sm font-bold uppercase tracking-wide text-white mb-4">Cabang</h4>
+            <div className="space-y-5">
+              {branchDetails.map((b) => (
+                <div key={b.name} className="border-b border-white/5 pb-4 last:border-0 last:pb-0">
+                  <h5 className="font-bold text-white text-sm leading-none mb-2">{b.name}</h5>
+                  <p className="text-slate-400 text-xs leading-relaxed">{b.address}</p>
+                  
+                  {/* Info Kontak Spesifik Cabang jika ada */}
+                  {(b.telp || b.fax || b.email) && (
+                    <div className="mt-1.5 text-[11px] text-slate-500 space-y-0.5">
+                      {b.telp && <p>Telp: <span className="text-slate-400">{b.telp}</span></p>}
+                      {b.fax && <p>Fax: <span className="text-slate-400">{b.fax}</span></p>}
+                      {b.email && <p>Email: <span className="text-brand-400">{b.email}</span></p>}
+                    </div>
+                  )}
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
 
