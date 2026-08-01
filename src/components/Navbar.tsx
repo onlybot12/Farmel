@@ -30,12 +30,24 @@ export function Navbar() {
       }`}
     >
       <nav className="container-x flex h-20 items-center justify-between">
+        
+        { }
         <a href="#beranda" className="group flex items-center gap-3">
-          <span className="grid h-11 w-11 place-items-center rounded-2xl bg-brand-600 text-white shadow-lg shadow-brand-600/30 transition-transform duration-300 group-hover:scale-105">
-            <Icon name="droplet" className="h-6 w-6" />
-          </span>
-          <span className="flex flex-col leading-none">
-            <span className={`font-display text-xl font-extrabold tracking-tight ${scrolled ? 'text-slate-900' : 'text-slate-900'}`}>
+          <img 
+            src="/logo.png" 
+            alt="Logo Farmel" 
+            className="h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+            onError={(e) => {
+              
+              const target = e.target as HTMLElement;
+              target.style.display = 'none';
+              const textFallback = target.nextElementSibling as HTMLElement;
+              if (textFallback) textFallback.style.display = 'flex';
+            }}
+          />
+          { }
+          <span className="hidden flex-col leading-none">
+            <span className="font-display text-xl font-extrabold tracking-tight text-slate-900">
               Farmel
             </span>
             <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-600">
@@ -44,6 +56,7 @@ export function Navbar() {
           </span>
         </a>
 
+        { }
         <ul className="hidden items-center gap-1 lg:flex">
           {links.map((l) => (
             <li key={l.href}>
@@ -57,6 +70,7 @@ export function Navbar() {
           ))}
         </ul>
 
+        { }
         <div className="hidden lg:block">
           <a href="#kontak" className="btn-primary">
             Hubungi Kami
@@ -64,16 +78,18 @@ export function Navbar() {
           </a>
         </div>
 
+        { }
         <button
           onClick={() => setOpen((v) => !v)}
           className="grid h-11 w-11 place-items-center rounded-2xl border border-slate-200 bg-white/70 text-slate-700 backdrop-blur lg:hidden"
           aria-label="Menu"
+          aria-expanded={open}
         >
           <Icon name={open ? 'close' : 'menu'} className="h-5 w-5" />
         </button>
       </nav>
 
-      {/* Mobile menu */}
+      { }
       <div
         className={`overflow-hidden transition-all duration-500 lg:hidden ${
           open ? 'max-h-96' : 'max-h-0'
