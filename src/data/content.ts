@@ -38,7 +38,7 @@ export const sectors = [
   'Rumah', 'Apartemen', 'Rumah Sakit', 'Gedung Kantor', 'Pabrik Industri', 'Perkotaan',
 ]
 
-export const branches = ['Jakarta Pusat', 'Bintaro', 'Semarang', 'Surabaya', 'Bali']
+export const branches = ['Jakarta Pusat', 'Tangerang','Bintaro', 'Semarang', 'Surabaya', 'Bali']
 
 export type ClientItem = { name: string; logo: string }
 
