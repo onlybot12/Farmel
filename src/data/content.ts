@@ -43,7 +43,7 @@ export const branches = ['Jakarta Pusat', 'Bintaro', 'Semarang', 'Surabaya', 'Ba
 export type ClientItem = { name: string; logo: string }
 
 export const clients: ClientItem[] = [
-  { name: 'Richeese Factory', logo: '/client/richeese_factory.jpg' },
+  { name: 'Richeese Factory', logo: '/client/Logo-Richeese-Factory.png' },
   { name: 'Waskita Karya', logo: '/client/waskita_karya.jpg' },
   { name: 'Bali Hai', logo: '/client/bali_hai.jpg' },
   { name: 'PP Konstruksi', logo: '/client/pp_konstruksi.jpg' },
