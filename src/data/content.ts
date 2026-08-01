@@ -84,9 +84,9 @@ export const legality = [
 
 export const contact = {
   phone: '(62-21) 7362295',
-  fax: '(62-21) 7362311',
+  phone2: '(62-21) 7362311',
   email: 'marketing@farmel.co.id',
-  address: 'Jl. Raya Pondok Jaya No. 1 Bintaro, Tangerang, Indonesia',
+  address: 'JI. Raya Bendungan Jago No. 20 E Kemayoran - Jakarta Pusat',
 }
 
 
