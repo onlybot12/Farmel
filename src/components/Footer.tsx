@@ -74,8 +74,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs sm:flex-row">
-          <p>© {new Date().getFullYear()} Farmel Cahaya Mandiri. All rights reserved.</p>
-          <p>By Maulana & Raihan</p>
+          <p>© {new Date().getFullYear()} Farmel Cipta Mulia. All rights reserved.</p>
         </div>
       </div>
     </footer>
