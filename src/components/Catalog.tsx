@@ -1,9 +1,12 @@
-import { products } from '../data/content'
+import { Icon } from './Icon'
+import { products, fullProducts } from '../data/content'
 
 export function Catalog() {
   return (
     <section id="katalog" className="section-pad bg-white">
       <div className="container-x">
+        
+        {/* ================= BAGIAN GRID VISUAL (ATAS) ================= */}
         <div className="reveal mx-auto max-w-2xl text-center mb-12">
           <span className="eyebrow justify-center">
             <span className="h-px w-8 bg-brand-500" /> Katalog Produk
@@ -46,6 +49,70 @@ export function Catalog() {
             </div>
           ))}
         </div>
+
+
+        {/* ================= BAGIAN DAFTAR LENGKAP TEKS (BAWAH) ================= */}
+        <div className="reveal mt-24 border-t border-slate-100 pt-16">
+          <div className="max-w-2xl mx-auto text-center mb-12">
+            <span className="eyebrow justify-center">
+              <span className="h-px w-8 bg-brand-500" /> Spesifikasi Komprehensif
+            </span>
+            <h3 className="h-display mt-4 text-2xl sm:text-3xl">
+              Daftar Produk & Layanan Lengkap
+            </h3>
+            <p className="mt-2 text-xs sm:text-sm text-slate-500">
+              Solusi terintegrasi secara detail untuk Water Treatment, Waste Water Treatment, serta Service & Maintenance.
+            </p>
+          </div>
+
+          {/* Grid responsif: 1 kolom di mobile, 3 kolom di desktop dengan efek transisi melayang */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            {fullProducts.map((cat, idx) => (
+              <div 
+                key={cat.title}
+                className="reveal group bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-100 hover:border-brand-200 hover:bg-white hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5"
+                style={{ transitionDelay: `${idx * 100}ms` }}
+              >
+                {/* Header Kategori */}
+                <div className="flex items-center gap-3 border-b border-slate-200/60 pb-4 mb-6">
+                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-brand-600 text-white shadow-md shadow-brand-600/20 transition-transform duration-300 group-hover:scale-105 group-hover:rotate-3">
+                    <Icon name={cat.icon} className="h-5 w-5" />
+                  </span>
+                  <div>
+                    <h4 className="font-display text-sm font-extrabold text-slate-900 tracking-tight leading-none">
+                      {cat.title}
+                    </h4>
+                    {cat.brand && (
+                      <span className="mt-1.5 inline-block text-[9px] font-bold text-brand-600 bg-brand-50 px-2 py-0.5 rounded-full uppercase tracking-wider">
+                        Brand: {cat.brand}
+                      </span>
+                    )}
+                  </div>
+                </div>
+
+                {/* List Item Teks */}
+                <ul className="space-y-4">
+                  {cat.items.map((item, itemIdx) => (
+                    <li key={itemIdx} className="flex items-start gap-3">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500 transition-transform duration-300 group-hover:scale-125" />
+                      <div className="flex flex-col">
+                        <span className="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">
+                          {item.label}
+                        </span>
+                        {item.desc && (
+                          <span className="text-xs text-slate-500 mt-1 leading-relaxed">
+                            {item.desc}
+                          </span>
+                        )}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   )
