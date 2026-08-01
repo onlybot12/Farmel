@@ -40,21 +40,23 @@ export const sectors = [
 
 export const branches = ['Jakarta Pusat', 'Bintaro', 'Semarang', 'Surabaya', 'Bali']
 
-export const clients = [
-  'Richeese Factory', 
-  'Waskita Karya', 
-  'Bali Hai', 
-  'PP Konstruksi',
-  'Argha Karya', 
-  'Hutama Karya', 
-  'Unifam', 
-  'Wika',
-  'Kiko', 
-  'Angkasa Pura II', 
-  'Darya Varia', 
-  'Adhi Karya',
-  'Sierad Produce',
-  'Nabati',
+export type ClientItem = { name: string; logo: string }
+
+export const clients: ClientItem[] = [
+  { name: 'Richeese Factory', logo: '/client/richeese_factory.jpg' },
+  { name: 'Waskita Karya', logo: '/client/waskita_karya.jpg' },
+  { name: 'Bali Hai', logo: '/client/bali_hai.jpg' },
+  { name: 'PP Konstruksi', logo: '/client/pp_konstruksi.jpg' },
+  { name: 'Argha Karya', logo: '/client/argha_karya.jpg' },
+  { name: 'Hutama Karya', logo: '/client/hutama_karya.jpg' },
+  { name: 'Unifam', logo: '/client/unifam.jpg' },
+  { name: 'Wika', logo: '/client/wika.jpg' },
+  { name: 'Kiko', logo: '/client/kiko.jpg' },
+  { name: 'Angkasa Pura II', logo: '/client/angkasa_pura_ii.jpg' },
+  { name: 'Darya Varia', logo: '/client/darya_varia.jpg' },
+  { name: 'Adhi Karya', logo: '/client/adhi_karya.jpg' },
+  { name: 'Sierad Produce', logo: '/client/sierad_produce.jpg' },
+  { name: 'Nabati', logo: '/client/nabati.jpg' },
 ]
 
 export const milestones = [
