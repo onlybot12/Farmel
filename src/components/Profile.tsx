@@ -38,7 +38,7 @@ export function Profile() {
             untuk memenuhi kebutuhan service dan pelayanan yang optimal.
           </p>
 
-          {/* Visi Misi */}
+          { }
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             <div className="card">
               <div className="flex items-center gap-3">
@@ -48,8 +48,7 @@ export function Profile() {
                 <h3 className="font-display text-lg font-bold text-slate-900">Visi</h3>
               </div>
               <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                Menjadi perusahaan multinasional yang kompeten di bidang total water
-                manajemen serta general kontraktor.
+                To be a multinational company who are competent in the field of total water management and mechanical electrical services
               </p>
             </div>
             <div className="card">
@@ -60,8 +59,7 @@ export function Profile() {
                 <h3 className="font-display text-lg font-bold text-slate-900">Misi</h3>
               </div>
               <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                Memberikan produk kualitas terbaik dan layanan total water manajemen serta
-                general kontraktor untuk pembangunan dengan menjaga kelestarian lingkungan.
+                Provide the best quality products and services in the field of total water management and mechanical electrical services by keeping the maintaining environmental sustainability for the future
               </p>
             </div>
           </div>
