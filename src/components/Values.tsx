@@ -1,7 +1,15 @@
+import { useState } from 'react' 
 import { Icon } from './Icon'
 import { values, legality } from '../data/content'
 
 export function Values() {
+  // ini biar aktif bro kalo di klick
+  const [activeIndex, setActiveIndex] = useState<number | null>(null)
+
+  const toggleAccordion = (index: number) => {
+    setActiveIndex(activeIndex === index ? null : index)
+  }
+
   return (
     <section id="nilai" className="section-pad bg-slate-50">
       <div className="container-x">
@@ -34,7 +42,7 @@ export function Values() {
           ))}
         </div>
 
-        {/* Legality */}
+        { }
         <div className="reveal mt-16">
           <div className="rounded-3xl border border-slate-100 bg-white p-8 shadow-sm sm:p-10">
             <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
@@ -46,14 +54,44 @@ export function Values() {
               </div>
               <p className="text-sm text-slate-500">Dokumen & sertifikasi lengkap</p>
             </div>
-            <dl className="mt-8 grid gap-px overflow-hidden rounded-2xl border border-slate-100 bg-slate-100 sm:grid-cols-2 lg:grid-cols-3">
-              {legality.map((l) => (
-                <div key={l.label} className="bg-white px-5 py-4">
-                  <dt className="text-xs font-semibold uppercase tracking-wide text-brand-600">{l.label}</dt>
-                  <dd className="mt-1 text-sm font-medium text-slate-700">{l.value}</dd>
-                </div>
-              ))}
-            </dl>
+
+            { }
+            <div className="mt-8 divide-y divide-slate-100 overflow-hidden rounded-2xl border border-slate-100 bg-white">
+              {legality.map((l, idx) => {
+                const isOpen = activeIndex === idx
+                return (
+                  <div key={l.label} className="bg-white transition-colors hover:bg-slate-50/30">
+                    { }
+                    <button
+                      onClick={() => toggleAccordion(idx)}
+                      className="flex w-full items-center justify-between px-5 py-4 text-left outline-none transition-all"
+                    >
+                      <span className={`text-xs sm:text-sm font-bold uppercase tracking-wide transition-colors duration-300 ${isOpen ? 'text-brand-600' : 'text-slate-700'}`}>
+                        {l.label}
+                      </span>
+                      { }
+                      <span className={`grid h-6 w-6 shrink-0 place-items-center rounded-full bg-slate-100 text-slate-500 transition-all duration-300 ${isOpen ? 'rotate-180 bg-brand-50 text-brand-600' : ''}`}>
+                        <svg className="h-3.5 w-3.5 stroke-current" fill="none" viewBox="0 0 24 24" strokeWidth="2.5">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                      </span>
+                    </button>
+                    
+                    { }
+                    <div className={`grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+                      <div className="overflow-hidden">
+                        <div className="px-5 pb-4 pt-1">
+                          <p className="text-sm font-medium text-slate-600">
+                            {l.value}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+
           </div>
         </div>
       </div>
