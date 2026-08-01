@@ -68,14 +68,14 @@ export const values = [
 ]
 
 export const legality = [
-  { label: 'Akta Pendirian', value: 'Notaris Apsari Sri Ekowati, S.H' },
-  { label: 'Akta Perubahan', value: 'Notaris Nurwahidah Z. Isnaini, S.H' },
+  { label: 'Akta Pendirian', value: 'Notaris Seruni Lissari S. S.H, M.Kn.' },
+  { label: 'Akta Perubahan', value: 'Notaris Hendrik Tri Subiyanto S.H, M.Kn' },
   { label: 'Kemenkumham', value: 'AHU-0049585.AH.01.02.Tahun 2020' },
-  { label: 'SIUP', value: '9120205153602' },
-  { label: 'TDP', value: '30.08.1.46.09851' },
-  { label: 'NPWP', value: '76.448.148.7-453.000' },
+  { label: 'SIUP', value: '1810230030915' },
+  { label: 'TDP', value: '1810230030915' },
+  { label: 'NPWP', value: '50.702.922.1-453.000' },
   { label: 'PKP', value: 'S-821PKP/WPJ.08/KP.1003/2016' },
-  { label: 'SKT', value: 'S-15079KT/WPJ.08/KP.1003/2016' },
+  { label: 'SKT', value: 'S-20631/KT/KPP.081003/2023' },
   { label: 'SKDU Perusahaan', value: '503/336-Kesos' },
   { label: 'UUG', value: 'Notaris Endah Ariani, SH. M.Kn' },
   { label: 'IPAK', value: 'Notaris Endah Ariani, SH. M.Kn' },
