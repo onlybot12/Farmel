@@ -10,15 +10,29 @@ export function Footer() {
       <div className="container-x">
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
+            
+            {/* Bagian Logo Footer (Telah di-update menggunakan Gambar Logo) */}
             <div className="flex items-center gap-3">
-              <span className="grid h-11 w-11 place-items-center rounded-2xl bg-brand-600 text-white">
-                <Icon name="droplet" className="h-6 w-6" />
-              </span>
-              <div className="leading-none">
+              <img 
+                src="/logo.png" 
+                alt="Logo Farmel" 
+                className="h-11 w-auto object-contain" 
+                onError={(e) => {
+                  // Fallback: Jika file gambar logo.png tidak ditemukan di folder public,
+                  // ia akan otomatis menyembunyikan gambar kosong dan memunculkan teks di bawahnya.
+                  const target = e.target as HTMLElement;
+                  target.style.display = 'none';
+                  const textFallback = target.nextElementSibling as HTMLElement;
+                  if (textFallback) textFallback.style.display = 'block';
+                }}
+              />
+              {/* Fallback Teks (Hanya muncul jika file gambar logo.png tidak ditemukan) */}
+              <div className="hidden leading-none">
                 <p className="font-display text-xl font-extrabold text-white">Farmel</p>
                 <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-400">Water Solution</p>
               </div>
             </div>
+
             <p className="mt-5 max-w-sm text-sm leading-relaxed">
               Indonesia's Biggest Water Treatment Technology and General Contractor.
               Total Water Management sejak 2004.
@@ -60,7 +74,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs sm:flex-row">
           <p>© {new Date().getFullYear()} Farmel Cahaya Mandiri. All rights reserved.</p>
-          <p>Designed with care for a cleaner Indonesia.</p>
+          <p>By Maulana & Raihan</p>
         </div>
       </div>
     </footer>
