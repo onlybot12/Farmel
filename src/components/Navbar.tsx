@@ -4,6 +4,7 @@ import { Icon } from './Icon'
 const links = [
   { href: '#profil', label: 'Profil' },
   { href: '#layanan', label: 'Layanan' },
+  { href: '#Katalog', label: 'Katalog' },
   { href: '#perjalanan', label: 'Perjalanan' },
   { href: '#nilai', label: 'Nilai' },
   { href: '#klien', label: 'Klien' },
