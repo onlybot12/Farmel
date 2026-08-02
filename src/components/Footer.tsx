@@ -4,7 +4,8 @@ import { contact } from '../data/content'
 export function Footer() {
   const products = ['Total Water Treatment', 'Water Treatment Plant', 'Waste Water Treatment Plant']
   const sectors = ['Rumah', 'Apartemen', 'Rumah Sakit', 'Gedung Kantor', 'Pabrik Industri']
-  
+
+  // Daftar data detail cabang yang Anda berikan
   const branchDetails = [
     {
       name: 'Jakarta Pusat',
@@ -44,11 +45,11 @@ export function Footer() {
   return (
     <footer className="border-t border-slate-100 bg-slate-950 pt-16 pb-8 text-slate-400">
       <div className="container-x">
-        { }
+        {/* Rasio lebar kolom grid disesuaikan agar kolom Cabang (paling kanan) menjadi lebih lebar */}
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1.8fr]">
           <div>
             
-            { }
+            {/* Bagian Logo Footer */}
             <div className="flex items-center gap-3">
               <img 
                 src="/logo.png" 
@@ -72,7 +73,7 @@ export function Footer() {
               Total Water Management sejak 2004.
             </p>
             
-            { }
+            {/* Kontak Utama (Sudah diperbaiki dengan mengganti contact.fax menjadi contact.phone2 agar lolos type-checking) */}
             <div className="mt-6 space-y-2 text-sm">
               <a 
                 href={`tel:${contact.phone?.replace(/[^0-9+]/g, '')}`} 
@@ -82,11 +83,11 @@ export function Footer() {
                 Telp {contact.phone}
               </a>
               <a 
-                href={`tel:${(contact.phone2 || contact.fax)?.replace(/[^0-9+]/g, '')}`} 
+                href={`tel:${contact.phone2?.replace(/[^0-9+]/g, '')}`} 
                 className="flex items-center gap-2 hover:text-white transition-colors duration-200"
               >
                 <Icon name="phone" className="h-4 w-4 text-brand-400" /> 
-                Fax {contact.phone2 || contact.fax}
+                Fax {contact.phone2}
               </a>
               <a 
                 href={`mailto:${contact.email}`} 
@@ -120,7 +121,7 @@ export function Footer() {
             </ul>
           </div>
 
-          { }
+          {/* Kolom Cabang Baru */}
           <div>
             <h4 className="font-display text-sm font-bold uppercase tracking-wide text-white mb-4">Cabang</h4>
             <div className="space-y-5">
@@ -129,7 +130,7 @@ export function Footer() {
                   <h5 className="font-bold text-white text-sm leading-none mb-2">{b.name}</h5>
                   <p className="text-slate-400 text-xs leading-relaxed">{b.address}</p>
                   
-                  { }
+                  {/* Info Kontak Spesifik Cabang */}
                   {(b.telp || b.fax || b.email) && (
                     <div className="mt-1.5 text-[11px] text-slate-500 space-y-0.5">
                       {b.telp && (
