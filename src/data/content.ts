@@ -77,9 +77,9 @@ export const legality = [
   { label: 'PKP', value: 'S-821PKP/WPJ.08/KP.1003/2016' },
   { label: 'SKT', value: 'S-20631/KT/KPP.081003/2023' },
   { label: 'SKDU Perusahaan', value: '503/336-Kesos' },
-  { label: 'UUG', value: 'Notaris Endah Ariani, SH. M.Kn' },
-  { label: 'IPAK', value: 'Notaris Endah Ariani, SH. M.Kn' },
-  { label: 'SIUJKN', value: 'Notaris Endah Ariani, SH. M.Kn' },
+  { label: 'UUG', value: 'Notaris Hendrik Tri Subiyanto S.H, M.Kn' },
+  { label: 'IPAK', value: 'Notaris Hendrik Tri Subiyanto S.H, M.Kn' },
+  { label: 'SIUJKN', value: 'Notaris Hendrik Tri Subiyanto S.H, M.Kn' },
 ]
 
 export const contact = {
