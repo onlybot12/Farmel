@@ -4,8 +4,7 @@ import { contact } from '../data/content'
 export function Footer() {
   const products = ['Total Water Treatment', 'Water Treatment Plant', 'Waste Water Treatment Plant']
   const sectors = ['Rumah', 'Apartemen', 'Rumah Sakit', 'Gedung Kantor', 'Pabrik Industri']
-
-  // Daftar data detail cabang yang Anda berikan
+  
   const branchDetails = [
     {
       name: 'Jakarta Pusat',
@@ -45,11 +44,11 @@ export function Footer() {
   return (
     <footer className="border-t border-slate-100 bg-slate-950 pt-16 pb-8 text-slate-400">
       <div className="container-x">
-        {/* Rasio lebar kolom grid disesuaikan agar kolom Cabang (paling kanan) menjadi lebih lebar */}
+        { }
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1.8fr]">
           <div>
             
-            {/* Bagian Logo Footer */}
+            { }
             <div className="flex items-center gap-3">
               <img 
                 src="/logo.png" 
@@ -72,11 +71,34 @@ export function Footer() {
               Indonesia's Biggest Water Treatment Technology and General Contractor.
               Total Water Management sejak 2004.
             </p>
+            
+            { }
             <div className="mt-6 space-y-2 text-sm">
-              <p className="flex items-center gap-2"><Icon name="phone" className="h-4 w-4 text-brand-400" /> Telp  {contact.phone}</p>
-              <p className="flex items-center gap-2"><Icon name="phone" className="h-4 w-4 text-brand-400" /> Fax  {contact.phone2}</p>
-              <p className="flex items-center gap-2"><Icon name="mail" className="h-4 w-4 text-brand-400" /> {contact.email}</p>
-              <p className="flex items-start gap-2"><Icon name="pin" className="mt-0.5 h-4 w-4 shrink-0 text-brand-400" /> {contact.address}</p>
+              <a 
+                href={`tel:${contact.phone?.replace(/[^0-9+]/g, '')}`} 
+                className="flex items-center gap-2 hover:text-white transition-colors duration-200"
+              >
+                <Icon name="phone" className="h-4 w-4 text-brand-400" /> 
+                Telp {contact.phone}
+              </a>
+              <a 
+                href={`tel:${(contact.phone2 || contact.fax)?.replace(/[^0-9+]/g, '')}`} 
+                className="flex items-center gap-2 hover:text-white transition-colors duration-200"
+              >
+                <Icon name="phone" className="h-4 w-4 text-brand-400" /> 
+                Fax {contact.phone2 || contact.fax}
+              </a>
+              <a 
+                href={`mailto:${contact.email}`} 
+                className="flex items-center gap-2 hover:text-white transition-colors duration-200"
+              >
+                <Icon name="mail" className="h-4 w-4 text-brand-400" /> 
+                {contact.email}
+              </a>
+              <p className="flex items-start gap-2">
+                <Icon name="pin" className="mt-0.5 h-4 w-4 shrink-0 text-brand-400" /> 
+                {contact.address}
+              </p>
             </div>
           </div>
 
@@ -98,7 +120,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Kolom Cabang Baru (Dengan rincian alamat dan kontak yang rapi) */}
+          { }
           <div>
             <h4 className="font-display text-sm font-bold uppercase tracking-wide text-white mb-4">Cabang</h4>
             <div className="space-y-5">
@@ -107,12 +129,42 @@ export function Footer() {
                   <h5 className="font-bold text-white text-sm leading-none mb-2">{b.name}</h5>
                   <p className="text-slate-400 text-xs leading-relaxed">{b.address}</p>
                   
-                  {/* Info Kontak Spesifik Cabang jika ada */}
+                  { }
                   {(b.telp || b.fax || b.email) && (
                     <div className="mt-1.5 text-[11px] text-slate-500 space-y-0.5">
-                      {b.telp && <p>Telp: <span className="text-slate-400">{b.telp}</span></p>}
-                      {b.fax && <p>Fax: <span className="text-slate-400">{b.fax}</span></p>}
-                      {b.email && <p>Email: <span className="text-brand-400">{b.email}</span></p>}
+                      {b.telp && (
+                        <p>
+                          Telp:{' '}
+                          <a 
+                            href={`tel:${b.telp.replace(/[^0-9+]/g, '')}`} 
+                            className="text-slate-400 hover:text-white transition-colors duration-200"
+                          >
+                            {b.telp}
+                          </a>
+                        </p>
+                      )}
+                      {b.fax && (
+                        <p>
+                          Fax:{' '}
+                          <a 
+                            href={`tel:${b.fax.replace(/[^0-9+]/g, '')}`} 
+                            className="text-slate-400 hover:text-white transition-colors duration-200"
+                          >
+                            {b.fax}
+                          </a>
+                        </p>
+                      )}
+                      {b.email && (
+                        <p>
+                          Email:{' '}
+                          <a 
+                            href={`mailto:${b.email}`} 
+                            className="text-brand-400 hover:text-brand-300 transition-colors duration-200"
+                          >
+                            {b.email}
+                          </a>
+                        </p>
+                      )}
                     </div>
                   )}
                 </div>
