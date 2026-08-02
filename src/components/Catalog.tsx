@@ -109,7 +109,7 @@ export function Catalog() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-3.5 text-sm font-bold text-brand-600 shadow-md transition-all duration-300 hover:bg-slate-50 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
             >
-              katalog.farmel.com
+              katalog Farmel
               <Icon name="arrow" className="h-4 w-4 text-brand-600" />
             </a>
           </div>
