@@ -104,7 +104,7 @@ export function Catalog() {
           </p>
           <div className="mt-8">
             <a 
-              href="https://katalog.farmelcipta.co.id" 
+              href="https://farmelkatalognew-neyx.vercel.app/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-3.5 text-sm font-bold text-brand-600 shadow-md transition-all duration-300 hover:bg-slate-50 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
