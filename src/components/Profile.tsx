@@ -27,18 +27,20 @@ export function Profile() {
             Mitra terpercaya total water management & general contractor
           </h2>
           <p className="mt-5 text-slate-600 leading-relaxed">
-            <strong className="font-semibold text-slate-800">Farmel Cipta Mandiri</strong> berdiri sejak 2004,
-            bergerak di bidang chemical trading, industri pengolahan air bersih dan limbah
-            dengan menyediakan kebutuhan pasar akan produk berkualitas, berbekal teknologi
-            lingkungan yang mutakhir dan efektif.
+            { }
+            <a 
+              href="https://farmel.co.id" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="font-semibold text-brand-600 hover:text-brand-700 hover:underline transition-colors duration-200"
+            >
+              Farmel Cipta Mandiri
+            </a> berdiri sejak 2004, bergerak di bidang chemical trading, industri pengolahan air bersih dan limbah dengan menyediakan kebutuhan pasar akan produk berkualitas, berbekal teknologi lingkungan yang mutakhir dan efektif.
           </p>
           <p className="mt-4 text-slate-600 leading-relaxed">
-            Pada 2010 kami membentuk unit jasa konstruksi — gedung, jembatan, jalan, serta
-            mekanikal dan elektrikal. Lalu pada 2016, PT. Farmel Cipta Mandiri hadir
-            untuk memenuhi kebutuhan service dan pelayanan yang optimal. Dan pada tahun 2023 terbentuk Perusahaan baru yaitu <strong className= "font-semibold text-slate-800"> PT. Farmel Cipta Mulia</strong> khusus untuk melayani service chemical water treatment dan kebutuhan lainnya.
+            Pada 2010 kami membentuk unit jasa konstruksi — gedung, jembatan, jalan, serta mekanikal dan elektrikal. Lalu pada 2016, PT. Farmel Cipta Mandiri hadir untuk memenuhi kebutuhan service dan pelayanan yang optimal. Dan pada tahun 2023 terbentuk Perusahaan baru yaitu <strong className="font-semibold text-slate-800"> PT. Farmel Cipta Mulia</strong> khusus untuk melayani service chemical water treatment dan kebutuhan lainnya.
           </p>
 
-          { }
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             <div className="card">
               <div className="flex items-center gap-3">
