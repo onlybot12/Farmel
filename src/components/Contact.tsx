@@ -24,7 +24,7 @@ export function Contact() {
               <div className="pointer-events-none absolute -bottom-20 -left-10 h-64 w-64 rounded-full bg-brand-400/20 blur-3xl" />
               <div className="relative flex flex-col h-full">
                 <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-200">
-                  <span className="h-px w-8 bg-brand-300" /> Hubungi Kami
+                  <span className="h-px w-8 bg-brand-300" /> Lokasi Kami
                 </span>
                 <h2 className="mt-4 font-display text-3xl font-extrabold leading-tight sm:text-4xl">
                   Mari wujudkan proyek Anda bersama Farmel
