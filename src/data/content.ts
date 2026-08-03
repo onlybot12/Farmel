@@ -86,7 +86,7 @@ export const contact = {
   phone: '(62-21) 7362295',
   phone2: '(62-21) 7362311',
   email: 'marketing@farmel.co.id',
-  address: 'MGK Kemayoran F-15 - Jakarta Pusat',
+  address: 'MGK Kemayoran F15 - Jakarta Pusat',
 }
 
 
