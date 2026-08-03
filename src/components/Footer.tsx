@@ -9,9 +9,11 @@ export function Footer() {
   const branchDetails = [
     {
       name: 'Jakarta Pusat',
-      address: 'Head Office : MGK Kemayoran F15 - Jakarta Pusat',
-      address: 'Production Office : JI. Raya Bendungan Jago No. 20 E Kemayoran - Jakarta Pusat',
-    },
+      address: [
+    'Head Office : MGK Kemayoran F15 - Jakarta Pusat',
+    'Production Office : JI. Raya Bendungan Jago No. 20 E Kemayoran - Jakarta Pusat',
+  ],
+    }
     {
       name: 'Surabaya',
       address: 'Komp. Ruko Monroe Jl. Kahuripan Nirwana No. 31 Sidoarjo, Jawa Timur',
