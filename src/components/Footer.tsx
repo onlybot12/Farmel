@@ -9,7 +9,8 @@ export function Footer() {
   const branchDetails = [
     {
       name: 'Jakarta Pusat',
-      address: 'Jl. Raya Bendungan Jago No. 20 E Kemayoran - Jakarta Pusat',
+      address: 'Head Office : MGK Kemayoran F15 - Jakarta Pusat',
+      address: 'Production Office : JI. Raya Bendungan Jago No. 20 E Kemayoran - Jakarta Pusat',
     },
     {
       name: 'Surabaya',
@@ -25,7 +26,7 @@ export function Footer() {
     },
     {
       name: 'Semarang',
-      address: 'Jl. Perintis Kemerdekaan No. 20 Banyumanik - Semarang',
+      address:  'Jl. Perintis Kemerdekaan No. 20 Banyumanik - Semarang',
       telp: '(024) 746 4580',
       fax: '(024) 746 4580',
       email: 'marketing.semarang@farmel.co.id',
